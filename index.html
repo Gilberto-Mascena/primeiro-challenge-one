@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1° - Desafio ONE</title>
-    <link rel="stylesheet" href="./styles/style.css">
+    <title>Codificador ONE</title>
+    <link rel="stylesheet" href="./style/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="./js/script.js" defer></script>
+    <script src="./js/scripts.js" defer></script>
 </head>
 
 <body>
@@ -18,29 +18,41 @@
             <a href="https://www.alura.com.br/">
                 <img class="header__img" src="./assets/logo-alura.png" alt="Letra A, como logo da Alura">
             </a>
-        </figure>
+        </figure>        
     </header>
     <main>
-        <section class="main__container">
-            <div class="main__input">
+        <section class="main__input">            
                 <div class="container__input">
-                    <textarea id="text__input"  placeholder="Digite seu texto"></textarea>
-                    <button class="clean__btn">Limpar</button>
+                    <input class="text__input" placeholder="Digite seu texto">
+                    <button class="btn" id="clean__btn">
+                        Limpar
+                    </button>
                 </div>
                 <div class="warning__btn">
                     <i class="fa-solid fa-circle-exclamation"></i>
-                    <p class="text__warning">Apenas letras minúsculas e
-                        sem acento.</p>
-                    <button class="encrypt__btn">Criptografar</button>
-                    <button class="decrypted__btn">Descriptografar</button>
-                </div>
-            </div>
-            <div class="container__output">
-                <textarea id="text__output" placeholder="Nenhuma menssagem encontrada!"></textarea>                
+                    <p class="text__warning">Apenas letras minúsculas e sem acento.</p>
+                    <button class="btn" id="encrypt__btn">
+                        Criptografar
+                    </button>
+                    <button class="btn" id="decrypted__btn">
+                        Descriptografar
+                    </button>
+                </div>            
+        </section>
+
+        <section class="container__output">           
+                <textarea class="text__output"></textarea>
                 <div class="copy__text__output">
-                    <button id="copy__btn__output">Copiar</button>                    
-                </div>
-            </div>
+                    <div class="content__output">
+                        <img class="img__output" src="./assets/homenzinho.svg" alt="">
+                        <p class="mesenger__output">Nenhuma menssagem encontrada!</p>
+                    </div>
+                    <div class="btn__copy">
+                        <button class="btn" id="copy__btn__output">
+                            Copiar
+                        </button>
+                    </div>
+                </div>           
         </section>
     </main>
     <footer>
@@ -57,4 +69,5 @@
         <p class="copy">&copy; 2024 Gilberto | Dev</p>
     </footer>
 </body>
+
 </html>
