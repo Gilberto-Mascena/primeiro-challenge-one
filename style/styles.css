@@ -122,10 +122,9 @@ main {
 .copy__text__output {
     position: absolute; 
     text-align: center;   
-    margin-top: -27rem;  
-    gap: 2rem;
+    margin-top: -27rem;     
     padding: 0 1rem;
-    width: 25rem;        
+    width: 24rem;        
 }
 
 .img__output {
