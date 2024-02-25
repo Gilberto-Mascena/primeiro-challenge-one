@@ -22,4 +22,4 @@
 
 ## *Projeto*
 
-- [*Link para o projeto*](https://primeiro-challenge-9nvjqac5m-gilbertodevs-projects.vercel.app/)
+- [*Link para o projeto*](https://primeiro-challenge-one-gilbertodev.vercel.app/)
