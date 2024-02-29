@@ -1,11 +1,37 @@
-const cleanBtnInput = document.querySelector('#clean__btn');
-const decryptedBtn = document.querySelector('#decrypted__btn');
-const copyBtn = document.querySelector('#copy__btn__output');
-const encryptBtn = document.querySelector('#encrypt__btn');
+const cleanBtnInput = document.querySelector('.clean__btn');
+const decryptedBtn = document.querySelector('.decrypted__btn');
+const copyBtn = document.querySelector('.copy__btn__output');
+const encryptBtn = document.querySelector('.encrypt__btn');
 const hideClass = document.querySelector('.content__output');
 const classBtnCopy = document.querySelector('.btn__copy');
+const changeThemeBtn = document.querySelector('#change-theme');
 
 classBtnCopy.style.visibility = 'hidden';
+
+
+function toggleDarkMode() {
+    document.body.classList.toggle('dark');
+};
+
+function loadTheme() {
+    const darMode = localStorage.getItem('dark');
+
+    if (darMode) {
+        toggleDarkMode();
+    };
+};
+
+loadTheme();
+
+changeThemeBtn.addEventListener('change', function() {
+    toggleDarkMode()
+    
+    localStorage.removeItem('dark');
+
+    if (document.body.classList.contains('dark')) {
+        localStorage.setItem('dark', 1);
+    };
+});
 
 
 function clearInput() {
