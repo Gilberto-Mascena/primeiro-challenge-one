@@ -6,7 +6,7 @@
 
 ## *Captura de tela*
 
-![vista](./assets/Visão%20do%20challenge%20ONE.png)
+![vista](./assets/challenge-ONE.png)
 
 ##
 
@@ -17,6 +17,9 @@
 - _**JavaScript**_
 - _**Trello**_
 - _**Figma**_
+- _**Git**_
+- _**GitHub**_
+- _**Vercel para deploy**_
 
 ## 
 
