@@ -42,3 +42,11 @@ src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.
 ## *Projeto*
 
 - [*Link para o projeto*](https://primeiro-challenge-one-gilbertodev.vercel.app/)
+##
+
+## *Licença* 
+
+*The* [*MIT License*](LICENSE.md) (*MIT*)
+
+*Copyright :copyright: 2024* 
+##
