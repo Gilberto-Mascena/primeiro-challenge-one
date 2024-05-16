@@ -1,9 +1,9 @@
 
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Gilberto-Mascena/primeiro-challenge-one)
-![license](https://img.shields.io/github/license/Gilberto-Mascena/primeiro-challenge-one)
-[![GitHub stars](https://img.shields.io/github/stars/Gilberto-Mascena/primeiro-challenge-one)](https://GitHub.com/Gilberto-Mascena/primeiro-challenge-one)
-[![GitHub issues](https://img.shields.io/github/issues/Gilberto-Mascena/primeiro-challenge-one)](https://GitHub.com/Gilberto-Mascena/primeiro-challenge-one)
-![tag](https://img.shields.io/github/v/release/Gilberto-Mascena/primeiro-challenge-one?include_prereleases)
+[![license](https://img.shields.io/github/license/Gilberto-Mascena/primeiro-challenge-one)](https://github.com/Gilberto-Mascena/primeiro-challenge-one/blob/main/LICENSE.md)
+[![GitHub stars](https://img.shields.io/github/stars/Gilberto-Mascena/primeiro-challenge-one)](https://github.com/Gilberto-Mascena/primeiro-challenge-one/stargazers)
+[![GitHub issues](https://img.shields.io/github/issues/Gilberto-Mascena/primeiro-challenge-one)](https://github.com/Gilberto-Mascena/primeiro-challenge-one/issues)
+[![tag](https://img.shields.io/github/v/release/Gilberto-Mascena/primeiro-challenge-one?include_prereleases)]()
 ![release](https://img.shields.io/github/release-date/Gilberto-Mascena/primeiro-challenge-one)
 ![size](https://img.shields.io/github/repo-size/Gilberto-Mascena/primeiro-challenge-one)
 
