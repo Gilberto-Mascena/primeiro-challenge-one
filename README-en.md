@@ -6,6 +6,9 @@
 ![release](https://img.shields.io/github/release-date/Gilberto-Mascena/primeiro-challenge-one)
 ![size](https://img.shields.io/github/repo-size/Gilberto-Mascena/primeiro-challenge-one)
 
+[English](https://github.com/Gilberto-Mascena/primeiro-challenge-one/blob/main/README-en.md) |
+[Português Brasileiro](https://github.com/Gilberto-Mascena/primeiro-challenge-one/blob/main/README.md)
+
 # 🚀 *First Challenge ONE*
 
 ## *Text Encryptor and Decryptor*
