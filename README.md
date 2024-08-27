@@ -13,27 +13,10 @@
 
 ### _Sobre o desafio_
 
-<div style="display: flex; justify-content: space-between">
-    <div style="text-align:center; flex: 1">
-    <h3 style="font-style: italic">Encriptação</h3>
-    <h4>&nbsp; &nbsp; A aplicação deve realizar a encriptação só em menusculas e apenas das vogais, da seguinte forma:</h4>
-        <p>a => ai</p>
-        <p>e => enter</p>
-        <p>i => imes</p>
-        <p>o => ober</p>
-        <p>u => ufat</p>        
-    </div>   
-    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;     
-    <div style="text-align:center; flex: 1">
-    <h3 style="font-style: italic">Descriptação</h3>
-    <h4>&nbsp; &nbsp; A aplicação deve realizar a descriptação só em menusculas e apenas das vogais, da seguinte forma:</h4>
-        <p>ai => a</p>
-        <p>enter => e</p>
-        <p>imes => i</p>
-        <p>ober => o</p>
-        <p>ufat => u</p>
-    </div>
-</div>
+| Encriptação | Descriptação | 
+| :-----------: | :------------: |
+| A aplicação deve realizar a encriptação só em menusculas e apenas das vogais, da seguinte forma: | A aplicação deve realizar a descriptação só em menusculas e apenas das vogais, da seguinte forma: |
+| a => ai, e => enter, i => imes, o => ober, u => ufat | ai => a, enter => e, imes => i, ober => o, ufat => u |
 
 ## *Imagem do projeto em execução*
 
