@@ -300,7 +300,7 @@ footer {
 }
 
 /* Media querie */
-@media (max-width: 1370px) {
+@media (min-width: 1360px) {
 
     .title {
         font-size: 3rem;
@@ -336,7 +336,7 @@ footer {
 
     .copy__text__output {
         width: 18rem;
-        margin-top: -23rem;
+        margin-top: -25rem;
     }
 
     .img__output {
