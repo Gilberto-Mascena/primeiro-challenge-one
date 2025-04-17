@@ -39,7 +39,7 @@ header {
 }
 
 .title {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 400;
 }
 
@@ -133,29 +133,30 @@ button {
 }
 
 /* Section two */
+
 .text__output {    
     position: relative;
     color: var(--color-light-tree);
     width: 24rem;
-    height: 40rem;
-    padding: 1rem;
+    height: 29rem;
+    padding: 3rem 1rem;
     text-align: center;
     font-size: 1.25rem;
     border-radius: 2rem;
     border: none;
     outline: none;
+    margin-top: 2rem;
 }
-
 .copy__text__output {
     position: absolute; 
     text-align: center;   
-    margin-top: -27rem;     
+    margin-top: -26rem;     
     padding: 0 1rem;
     width: 24rem;        
 }
 
 .img__output {
-    width: 13rem;
+    width: 10rem;
 }
 
 .mesenger__output {
@@ -167,7 +168,7 @@ button {
 }
 
 .mesenger__output span {
-    font-size: 1rem;
+    font-size: .8rem;
     font-weight: 100;
     
 }
@@ -193,8 +194,7 @@ footer {
 }
 
 .social__media {
-    display: flex;
-    flex-direction: row;
+    display: flex;    
     align-items: center;
     justify-content: center;
     gap: 1rem;
