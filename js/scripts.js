@@ -1,3 +1,4 @@
+// Seleção dos botões e elementos principais da interface
 const cleanBtnInput = document.querySelector('.clean__btn');
 const decryptedBtn = document.querySelector('.decrypted__btn');
 const copyBtn = document.querySelector('.copy__btn__output');
@@ -6,135 +7,152 @@ const hideClass = document.querySelector('.content__output');
 const classBtnCopy = document.querySelector('.btn__copy');
 const changeThemeBtn = document.querySelector('#change-theme');
 
+// Esconde o botão de cópia inicialmente
 classBtnCopy.style.visibility = 'hidden';
 
-
+/**
+ * Alterna o modo escuro no body
+ */
 function toggleDarkMode() {
     document.body.classList.toggle('dark');
-};
+}
 
+/**
+ * Carrega o tema salvo no localStorage
+ */
 function loadTheme() {
-    const darMode = localStorage.getItem('dark');
-
-    if (darMode) {
+    const darkMode = localStorage.getItem('dark');
+    if (darkMode) {
         toggleDarkMode();
-    };
-};
+    }
+}
 
 loadTheme();
 
-changeThemeBtn.addEventListener('change', function() {
-    toggleDarkMode()
-    
+/**
+ * Evento de mudança no switch do tema
+ */
+changeThemeBtn.addEventListener('change', function () {
+    toggleDarkMode();
+
+    // Atualiza o estado salvo no localStorage
     localStorage.removeItem('dark');
 
     if (document.body.classList.contains('dark')) {
-        localStorage.setItem('dark', 1);
-    };
+        localStorage.setItem('dark', '1');
+    }
 });
 
-
+/**
+ * Limpa o conteúdo de entrada e saída
+ */
 function clearInput() {
+    const input = document.querySelector('.text__input');
+    const output = document.querySelector('.text__output');
 
-    let inputOne = document.querySelector('.text__input');
-    inputOne.value = '';
-};
+    input.value = '';
+    output.value = '';
+    showOrHide();
+    showOrhideBtnCopy();
+}
 
+/**
+ * Criptografa o texto de entrada e exibe na saída
+ */
 function textEncrypted() {
+    const input = document.querySelector('.text__input');
+    const output = document.querySelector('.text__output');
 
-    let inputOne = document.querySelector('.text__input');
-    let inputTwo = document.querySelector('.text__output');
-    let valueOne = inputOne.value.toLowerCase();
-    let encrypt = valueOne
+    const valueOne = input.value.toLowerCase();
+    const encrypted = valueOne
         .replaceAll('e', 'enter')
         .replaceAll('i', 'imes')
         .replaceAll('a', 'ai')
         .replaceAll('o', 'ober')
         .replaceAll('u', 'ufat');
-    inputTwo.value = encrypt;
-};
 
+    output.value = encrypted;
+}
+
+/**
+ * Descriptografa o texto da saída.
+ * Se estiver vazia, usa o texto do input.
+ */
 function textDescripted() {
+    const input = document.querySelector('.text__input');
+    const output = document.querySelector('.text__output');
 
-    let inputOne = document.querySelector('.text__input');
-    let inputTwo = document.querySelector('.text__output');
-    let valueTwo = inputTwo.value.toLowerCase();
-    let decrypted = valueTwo
+    let value = output.value.toLowerCase();
+
+    // Se a saída estiver vazia, usa o valor do input
+    if (value === '') {
+        value = input.value.toLowerCase();
+    }
+
+    const decrypted = value
         .replaceAll('enter', 'e')
         .replaceAll('imes', 'i')
         .replaceAll('ai', 'a')
         .replaceAll('ober', 'o')
         .replaceAll('ufat', 'u');
-    inputTwo.value = decrypted;
 
-    if (inputTwo.value == '') {
-        inputTwo.value = inputOne.value;
-        valueTwo = inputTwo.value;
-        decrypted = valueTwo
-            .replaceAll('enter', 'e')
-            .replaceAll('imes', 'i')
-            .replaceAll('ai', 'a')
-            .replaceAll('ober', 'o')
-            .replaceAll('ufat', 'u');
-        inputTwo.value = decrypted;
-    };
-};
+    output.value = decrypted;
+}
 
+/**
+ * Mostra ou oculta a área de output com base no conteúdo
+ */
 function showOrHide() {
+    const output = document.querySelector('.text__output');
+    const outputContainer = document.querySelector('.content__output');
 
-    let inputTwo = document.querySelector('.text__output');
-    let showOrHide = document.querySelector('.content__output');
+    // Se houver conteúdo, mostra; caso contrário, esconde
+    outputContainer.style.visibility = output.value === '' ? 'visible' : 'hidden';
+}
 
-    if (inputTwo.value === '') {
-        showOrHide.style.visibility = 'visible';
-    }else {
-        showOrHide.style.visibility = 'hidden';
-    };
-};
-
+/**
+ * Mostra ou oculta o botão de cópia com base no conteúdo da saída
+ */
 function showOrhideBtnCopy() {
-    let inputTwo = document.querySelector('.text__output');
-    let classBtnCopy = document.querySelector('.btn__copy');
+    const output = document.querySelector('.text__output');
+    const copyButton = document.querySelector('.btn__copy');
 
-    if (inputTwo.value === '') {
-        classBtnCopy.style.visibility = 'hidden';
-    } else {
-        classBtnCopy.style.visibility = 'visible';
-    };
-};
+    copyButton.style.visibility = output.value === '' ? 'hidden' : 'visible';
+}
 
+/**
+ * Copia o texto da saída para a área de transferência
+ */
 function copyText() {
+    const output = document.querySelector('.text__output');
+    output.select();
+    output.setSelectionRange(0, 99999); // compatível com mobile
+    navigator.clipboard.writeText(output.value);
+    // Não apaga o conteúdo após a cópia
+}
 
-    let inputTwo = document.querySelector('.text__output');
-    inputTwo.select();
-    inputTwo.setSelectionRange(0, 99999);
-    navigator.clipboard.writeText(inputTwo.value);
-    inputTwo.value = '';
-};
+// Eventos de clique
+cleanBtnInput.addEventListener('click', clearInput);
 
-
-cleanBtnInput.addEventListener('click', function() {
-    clearInput();
-});
-
-encryptBtn.addEventListener('click', function() {
+encryptBtn.addEventListener('click', function () {
     textEncrypted();
     showOrHide();
     showOrhideBtnCopy();
 });
 
-hideClass.addEventListener('click', function() {
-    showOrHide();
-});
+// Removido: clicar na área de output não deveria disparar lógica de visibilidade
+// hideClass.addEventListener('click', function () {
+//     showOrHide();
+// });
 
-decryptedBtn.addEventListener('click', function() {
+decryptedBtn.addEventListener('click', function () {
     textDescripted();
     showOrHide();
     showOrhideBtnCopy();
 });
 
-copyBtn.addEventListener('click', function() {
+copyBtn.addEventListener('click', function () {
     copyText();
-    showOrHide();   
-    showOrhideBtnCopy();     
+    showOrHide();
+    showOrhideBtnCopy();
 });
